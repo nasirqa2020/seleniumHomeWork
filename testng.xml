@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="/Users/nasiruddin/IdeaProjects/seleniumHomeWork">
+        <parameter name="browser" value="opera"></parameter>
+        <classes>
+            <class name="base.ScriptBase">
+                <methods>
+                    <include name="init"/>
+                    <include name="init2"/>
+                    <include name="init3"/>
+                    <include name="init4"/>
+                    <include name="init5"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
