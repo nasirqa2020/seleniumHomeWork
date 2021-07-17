@@ -9,40 +9,38 @@ import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class ScriptBase {
-    public WebDriver driver;
+    public static WebDriver driver;
+    @Parameters("browser")
+    @BeforeTest
+    public void init(String browser) {
 
-//    @BeforeTest
-//    public void init() {
-//        String browser ="safaei";
-//
-//        if (browser.equalsIgnoreCase("chrome")){
-//            WebDriverManager.chromedriver().setup();
-//            driver= new ChromeDriver();
-//        }else if (browser.equalsIgnoreCase("firefox")){
-//            WebDriverManager.firefoxdriver().setup();
-//            driver= new FirefoxDriver();
-//        }else if (browser.equalsIgnoreCase("opera")){
-//            WebDriverManager.operadriver().setup();
-//            driver= new OperaDriver();
-//        }else if (browser.equalsIgnoreCase("safari")){
-//            driver= new SafariDriver();
-//        }
-//         driver.get("http://automationpractice.com/index.php");
 
-//        WebDriverManager.chromedriver().setup();
-//        driver = new ChromeDriver();
-//        driver.get("http://automationpractice.com/index.php");
+        if (browser.equalsIgnoreCase("chrome")) {
+            WebDriverManager.chromedriver().setup();
+            driver = new ChromeDriver();
+        } else if (browser.equalsIgnoreCase("firefox")) {
+            WebDriverManager.firefoxdriver().setup();
+            driver = new FirefoxDriver();
+        } else if (browser.equalsIgnoreCase("opera")) {
+            WebDriverManager.operadriver().setup();
+            driver = new OperaDriver();
+        } else if (browser.equalsIgnoreCase("safari")) {
+            driver = new SafariDriver();
+        }
+        driver.get("http://automationpractice.com/index.php");
 
-public void init() {
-    //System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver");
-    WebDriverManager.chromedriver().setup();
-    driver = new ChromeDriver();
-    driver.get("http://automationpractice.com/index.php");
-}
     }
+
+   // public void init() {
+//    //System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver");
+//    WebDriverManager.chromedriver().setup();
+//    driver = new ChromeDriver();
+//    driver.get("http://automationpractice.com/index.php");
+//    }
 
 //        @Test
 //        public void init2 () throws InterruptedException {
@@ -74,4 +72,9 @@ public void init() {
 //        driver.get("http://automationpractice.com/index.php");
 //
 //    }
-
+//@AfterTest
+//public void closeBrowser(){
+//    driver.close();
+//    driver.quit();
+//}
+}

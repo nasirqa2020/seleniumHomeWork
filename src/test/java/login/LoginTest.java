@@ -9,20 +9,24 @@ import org.testng.annotations.Test;
 public class LoginTest extends ScriptBase {
     LoginPage loginPage;
 
-    @BeforeTest
-    public void beforeTest(){
-        init();
-    }
-
     @Test
     public void verifyInvalidLogin() {
-        loginPage=new LoginPage(driver);
+        loginPage = new LoginPage(driver);
         loginPage.inValidSigning("futuregroup123@gmail.com", "12345");
 
     }
-@AfterTest
-    public void closeBrowser(){
-        driver.close();
-        driver.quit();
-}
+
+    @Test
+    public void verifyInvalidLogin2() {
+        loginPage = new LoginPage(driver);
+        loginPage.inValidSigning("futuregroup123@gmail.com", "12345");
+
+//    @AfterTest
+//    public void closeBrowser(){
+//        driver.close();
+//        driver.quit();
+//    }
+//
+//
+    }
 }
