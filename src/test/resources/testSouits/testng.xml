@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="reporting.Listener"></listener>
+    </listeners>
+    <parameter name="browser" value="chrome"></parameter>
+<!--<test verbose="2" preserve-order="true" name="regression1">-->
+
+<!--    <classes>-->
+<!--       <class name="login.LoginTest">-->
+<!--            <methods>-->
+<!--                 <include name="verifyInvalidLogin"/>-->
+<!--                <include name="verifyInvalidLogin2"/>-->
+<!--            </methods>-->
+<!--        </class>-->
+<!--    </classes>-->
+<!--</test>-->
+<!--    <test verbose="2" preserve-order="true" name="regression2">-->
+
+
+<!--        <classes>-->
+<!--            <class name="login.OverViewTest">-->
+<!--                <methods>-->
+<!--                    <include name="verifyViewSpecial"/>-->
+<!--                    <include name=" verifyViewNewProducts"/>-->
+<!--                    <include name="verifyViewSellers"/>-->
+<!--                    <include name="verifyOverViewOurstores"/>-->
+<!--                    <include name="verifyOverViewTermsAndConditionsOfUse"/>-->
+<!--                    <include name="verifyOverViewAboutUs"/>-->
+<!--                    <include name="verifyOverViewSiteMap"/>-->
+<!--                    <include name="verifyOverViewWomen"/>-->
+<!--                    <include name="verifyOverViewMyOrders"/>-->
+<!--                    <include name="verifyOverViewMyCreditSlips"/>-->
+<!--                    <include name="verifyOverViewMyAddresses"/>-->
+<!--                    <include name="verifyOverViewMyPersonalInfo"/>-->
+
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--<test verbose="2" preserve-order="true" name="regression3">-->
+
+
+<!--<classes>-->
+<!--    <class name="login.ContactUsTest">-->
+<!--        <methods>-->
+<!--            <include name="verifyContactPageWorkProperly"/>-->
+
+<!--        </methods>-->
+<!--    </class>-->
+<!--    </classes>-->
+<!--</test>-->
+<!--    <test verbose="2" preserve-order="true" name="regression4">-->
+
+<!--        <classes>-->
+<!--            <class name="login.WomenButtonTest">-->
+<!--                <methods>-->
+<!--                    <include name="verifyWomenButtonWorkProperly"/>-->
+
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test verbose="2" preserve-order="true" name="regression5">-->
+
+<!--        <classes>-->
+<!--            <class name="login.DressButtonTest">-->
+<!--                <methods>-->
+<!--                    <include name="verifyWomenButtonWorkProperly"/>-->
+
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test verbose="2" preserve-order="true" name="regression6">-->
+
+<!--        <classes>-->
+<!--            <class name="login.TshirtButtonTest">-->
+<!--                <methods>-->
+<!--                    <include name="verifyWomenButtonWorkProperly"/>-->
+
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test verbose="2" preserve-order="true" name="regression7">-->
+<!--        <classes>-->
+<!--            <class name="login.OverViewPageTest">-->
+<!--                <methods>-->
+<!--                    <include name="verifyMouseOverDisplayed"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+    <test verbose="2" preserve-order="true" name="regression8">
+        <classes>
+            <class name="login.SearchTest">
+                <methods>
+                    <include name="verifySearchShoes"/>
+                    <include name="verifySearchProductCap"/>
+                    <include name="verifySearchProductTops"/>
+                    <include name="verifySearchProductTshirt"/>
+                    <include name="verifySearchProductDress"/>
+
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>
